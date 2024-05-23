@@ -24,7 +24,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.android.navigationadvancedsample.R
 import com.example.android.navigationadvancedsample.listscreen.MyAdapter.Companion.USERNAME_KEY
-
+import com.example.android.navigationadvancedsample.logDestination
 
 /**
  * Shows a profile screen for a user, taking the name from the arguments.
@@ -36,6 +36,7 @@ class UserProfile : Fragment() {
 
 
         val view = inflater.inflate(R.layout.fragment_user_profile, container, false)
+        logDestination()
 
         val name = arguments?.getString(USERNAME_KEY) ?: "Ali Connors"
         view.findViewById<TextView>(R.id.profile_user_name).text = name

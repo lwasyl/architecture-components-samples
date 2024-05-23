@@ -19,17 +19,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/form"
-    app:startDestination="@id/register"
+    android:id="@+id/registered_nav_graph"
+    app:startDestination="@id/registered"
     >
 
-    <include app:graph="@navigation/form_2" />
-
     <fragment
-        android:id="@+id/register"
-        android:name="com.example.android.navigationadvancedsample.formscreen.Register"
-        android:label="@string/title_register"
-        tools:layout="@layout/fragment_register"
+        android:id="@+id/registered"
+        android:name="com.example.android.navigationadvancedsample.formscreen.Registered"
+        android:label="Registered"
+        tools:layout="@layout/fragment_registered"
         >
+        <deepLink app:uri="app://registered" />
     </fragment>
 </navigation>

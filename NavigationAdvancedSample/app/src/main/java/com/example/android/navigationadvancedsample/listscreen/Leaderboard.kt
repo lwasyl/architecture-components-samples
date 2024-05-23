@@ -27,6 +27,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.navigationadvancedsample.R
+import com.example.android.navigationadvancedsample.logDestination
 
 /**
  * Shows a static leaderboard with multiple users.
@@ -37,6 +38,7 @@ class Leaderboard : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_leaderboard, container, false)
+        logDestination()
 
         val viewAdapter = MyAdapter(Array(10) { "Person ${it + 1}" })
 

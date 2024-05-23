@@ -24,6 +24,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.android.navigationadvancedsample.R
+import com.example.android.navigationadvancedsample.logDestination
 
 /**
  * Shows the main title screen with a button that navigates to [About].
@@ -33,6 +34,7 @@ class Title : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_title, container, false)
+        logDestination()
 
         view.findViewById<Button>(R.id.about_btn).setOnClickListener {
             findNavController().navigate(R.id.action_title_to_about)
