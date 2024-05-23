@@ -36,7 +36,7 @@ class Leaderboard : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_leaderboard, container, false)
-
+        logDestination()
         val viewAdapter = MyAdapter(arrayOf("Flo", "Ly", "Jo"))
 
         view.findViewById<RecyclerView>(R.id.leaderboard_list).run {

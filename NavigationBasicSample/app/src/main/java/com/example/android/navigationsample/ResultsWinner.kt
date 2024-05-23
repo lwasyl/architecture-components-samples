@@ -33,7 +33,7 @@ class ResultsWinner : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_results_winner, container, false)
-
+        logDestination()
         view.findViewById<Button>(R.id.play_btn2).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_results_winner_to_match)
         }

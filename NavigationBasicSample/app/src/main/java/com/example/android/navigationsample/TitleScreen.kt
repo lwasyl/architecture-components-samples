@@ -32,7 +32,7 @@ class TitleScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_title_screen, container, false)
-
+        logDestination()
         view.findViewById<Button>(R.id.play_btn).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_title_screen_to_register)
         }

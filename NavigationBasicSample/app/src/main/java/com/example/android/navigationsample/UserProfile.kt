@@ -32,7 +32,7 @@ class UserProfile : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-
+        logDestination()
         val view = inflater.inflate(R.layout.fragment_user_profile, container, false)
 
         val name = arguments?.getString("userName") ?: "Ali Connors"

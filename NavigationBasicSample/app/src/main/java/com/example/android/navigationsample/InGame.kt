@@ -32,7 +32,7 @@ class InGame : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_in_game, container, false)
-
+        logDestination()
         val gameOverListener: (View) -> Unit = {
             Navigation.findNavController(view).navigate(R.id.action_in_game_to_gameOver)
         }
